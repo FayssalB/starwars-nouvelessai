@@ -1,0 +1,28 @@
+@import "reset";
+@font-face {
+  font-family: "StarWars";
+  src: url("../fonts/starjedi-webfont.woff") format("woff");
+  src: url("../fonts/starjedi-webfont.woff2") format("woff2");
+}
+body{
+   background-image: url("../img/stars.jpg");
+  font-family: "StarWars";
+  h1{
+    color: #FFE919;
+    text-align: center;
+  }
+  h2,h3,h4,h5{
+    text-align: center;
+    color: white;
+  }  
+  
+  
+  .color-jedi{
+    background-color: rgb(0, 114, 180) ;
+  }
+  .color-sith{
+    background-color: red;
+  }
+
+}
+ 
