@@ -8,31 +8,26 @@ require("templates/header.php");
 
 $file = file_get_contents('characters.json');
 $characters = json_decode($file);
-
-
 ?>
 
 <h3>selection du personnage</h3>
 
 
-<div class="">
+<div class="container">
     <?php
    foreach($characters as $character){
-
-   
     ?>
-        <div class="">
-            <a href="duel.php?id=<?=$character["id"]?>">
-                <img src="img/characters/<?=$character["id"]?>.jpg" alt="">
-                <div class="">
-                    <img class="" src="<?=$character["type"]?>saber.svg" alt="">
-                    <p><?=$character["puissance"]?></p>
-                    <hr class="<?="" ?>">
+        <div class="char_container">
+            <a href="duel.php?id=<?=$character->id?>">
+                <img src="img/characters/<?=$character->id?>.jpg" alt="">
+                <div class="stat">
+                    <img src="./img/<?=$character->type?>saber.svg" alt="">
+                    <p><?=$character->puissance?></p> 
+                   <!-- <hr class="color-<?=$character->type?>"> -->
                 </div>
             </a>
         </div>
     <?php 
-    
     }
     ?>
         
